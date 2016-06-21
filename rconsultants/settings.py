@@ -23,8 +23,10 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '2+wkex@!gs3d&c2fwv34uv_)7x($go5uul9@vd(lz%!q7h3i_k'
 
+ALLOWED_HOSTS = ['rishabhconsultants.herokuapp.com']
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
