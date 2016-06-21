@@ -27,7 +27,7 @@ ALLOWED_HOSTS = ['rishabhconsultants.herokuapp.com', '*']
 
 ADMINS = (('Rishabh Nehra', 'rishabhnehrapersonal@gmail.com'),)
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
