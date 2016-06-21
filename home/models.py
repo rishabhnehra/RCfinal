@@ -23,7 +23,7 @@ class Booking(models.Model):
 		return self.email
 
 class DisabledDates(models.Model):
-	did = models.AutoField(primary_key=True)
+	id = models.AutoField(primary_key=True)
 	disable = models.DateField()
 
 	# def __unicode__(self):
