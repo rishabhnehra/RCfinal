@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+  
+{% block head_title %}DEV | Disabled Dates | TESTING {% endblock %}
+
+{% block active %}
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li><a href="{% url 'register' %}">Register</a></li>
+{% endblock %}
+
+{% block content %}
+<style>
+  .navbar{
+    margin-bottom: 10px;
+  }
+  #query{
+    margin-bottom: 10px;
+  }
+</style>
+  <div class="container-fluid">
+    <ul>
+      {% for disabled in dates %}
+        <li>{{  disabled }}</li>
+      {% endfor %}
+    </ul>
+
+=-List-=
+     <ul>
+      {% for disabled in list %}
+        <li>{{ disabled }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <h1 id="h1">THIS IS NOT</h1>
+{% endblock %}

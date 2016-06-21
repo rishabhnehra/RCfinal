@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+  
+{% block head_title %}Unsuccessfull Booking{% endblock %}
+
+{% block active %}
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li class="active"><a href="{% url 'register' %}">Register</a></li>
+{% endblock %}
+
+{% block content %}
+<style>
+  .navbar{
+    margin-bottom: 10px;
+  }
+  #query{
+    margin-bottom: 10px;
+  }
+</style>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+
+  <h1>OOPS! Something went wrong.</h1>
+
+  <p>Your booking is not registered due to some error/s. Please try again. If this problem persists then send a complain to rishabhnehrapersonal@gmail.com</p>
+  
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+  
+{% block head_title %}Home | Booking {% endblock %}
+
+{% block active %}
+  <li><a href="{% url 'home' %}">Home</a></li>
+  <li class="active"><a href="{% url 'register' %}">Register</a></li>
+{% endblock %}
+
+{% block content %}
+<style>
+  .navbar{
+    margin-bottom: 10px;
+  }
+  #query{
+    margin-bottom: 10px;
+  }
+</style>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+  <form method="POST">
+  	{% csrf_token %}
+  	{{ form_html|crispy }}
+        <script type="text/javascript">
+            $(function () {
+            $('#{{ form_html.appointmentstamp.id_for_label }}').datetimepicker({
+                format: 'D/M/YYYY, h:mm a',
+                inline: true,
+                sideBySide: true,
+                disabledDates:[
+                  {% for disabled in disableddate %}
+                    "{{ disabled }}",
+                  {% endfor %}
+                ]
+            }); 
+        });
+        </script>
+      <input type="submit" id="query" class="btn btn-lg btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12" value="Submit Request" />
+    </div>
+</div>
+  </form>
+</div>
+{% endblock %}
