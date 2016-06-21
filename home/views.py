@@ -63,7 +63,7 @@ def register(request):
 		# print (js)
 		context = {
 			# 'js':js,
-			 'dates': dates,
+			'dates': dates,
 			'form_html':form,
 			'disableddate':disableddate
 		}
