@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from .models import Booking, DisabledDates
 from .forms import BookingForm
 from django.core.urlresolvers import reverse
-from django.core.mail import send_mail
+#from django.core.mail import send_mail
 import json
 # Create your views here.
 def get_ip(request):
@@ -34,24 +34,24 @@ def register(request):
 			instance.ip_address = get_ip(request)
 			instance.user_agent = request.META.get("HTTP_USER_AGENT")
 			first_name = request.POST.get('first_name')
-			subject = 'Regarding your booking on rishabhconsultants.com'
+			subject = 'Confirmation | Rishabh Consultants'
 			message = 'Dear ' + first_name + ',\n' +'\tYour booking has been duly noted. We"ll soon be in touch with your registered mobile or email.'
 			from_email = 'rishabhnehrapersonal@gmail.com'
 			recipient = request.POST.get('email')
+			admin2 = 'anilhnehra@gmail.com'
 			instance.save()
 			try:
 				send_mail(
 				    subject,
 				    message,
 				    from_email,
-				    [ recipient, from_email],
-				    fail_silently=True
-			)
+				    [ recipient, from_email, admin2],
+				    fail_silently=False
+				)
 			except:
 				return render(request, 'unsuccessful.html')
 
-
-			return render(request, 'successful_registered.html')
+			return render(request, 'successful_registered.html', )
 
 
 	except :
@@ -64,7 +64,7 @@ def register(request):
 		# print (js)
 		context = {
 			# 'js':js,
-			'dates': dates,
+			 'dates': dates,
 			'form_html':form,
 			'disableddate':disableddate
 		}

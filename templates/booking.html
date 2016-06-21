@@ -22,7 +22,16 @@
   <form method="POST">
   	{% csrf_token %}
   	{{ form_html|crispy }}
-        <script type="text/javascript">
+      
+      <input type="submit" id="query" class="btn btn-lg btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12" value="Submit Request" />
+    </div>
+</div>
+  </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+ <script type="text/javascript">
             $(function () {
             $('#{{ form_html.appointmentstamp.id_for_label }}').datetimepicker({
                 format: 'D/M/YYYY, h:mm a',
@@ -36,9 +45,4 @@
             }); 
         });
         </script>
-      <input type="submit" id="query" class="btn btn-lg btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12" value="Submit Request" />
-    </div>
-</div>
-  </form>
-</div>
 {% endblock %}
