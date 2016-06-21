@@ -24,7 +24,7 @@ class Booking(models.Model):
 
 class DisabledDates(models.Model):
 	id = models.AutoField(primary_key=True)#DON'T CHANGE THIS VARIABLE
-	disable = models.DateField()
+	disable = models.DateField(unique=True)
 
 	# def __unicode__(self):
 	# 	return unicode(self.disable) #This is required to show dates in string
