@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from .models import Booking, DisabledDates
 from .forms import BookingForm
 from django.core.urlresolvers import reverse
-#from django.core.mail import send_mail
+from django.core.mail import send_mail
 import json
 # Create your views here.
 def get_ip(request):
