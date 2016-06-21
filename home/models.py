@@ -30,4 +30,4 @@ class DisabledDates(models.Model):
 		return unicode(self.disable) #This is required to show dates in string
 
 	def __str__(self):
-		return str(	self.disable) #This is required to show dates in string
+		return str(self.disable) #This is required to show dates in string
