@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
   
-{% block head_title %}Successfull Booking{% endblock %}
+{% block head_title %}Successfull | Rishabh Consultants{% endblock %}
 
 {% block active %}
   <li><a href="{% url 'home' %}">Home</a></li>
@@ -10,18 +10,36 @@
 {% block content %}
 <style>
   .navbar{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   #query{
     margin-bottom: 10px;
   }
-</style>
-<div class="container">
-  <div class="col-md-6 col-md-offset-3">
+  .bg-1{
+     background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  p{
+    font-size: 20px;
+        text-align: center;
 
-  <h1>Your issue has been registered and we'll get in touch with you shortly.</h1>
+  }
+
+  .container-fluid {
+    padding-top: 67px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 114px;
+}
+
   
-    </div>
+</style>
+<div class="container-fluid bg-1 text-center">  
+    <i class="fa fa-check-circle fa-5x"></i>
+    <h1><strong>Successfully Registered</strong></h1>
+    <p>Your request has been registered and a confirmation mail has been sent to your registered mail. If you're encountering any problem then feel free to report at rishabhnehrapersonal@gmail.com</p>
 </div>
 {% endblock %}
 
