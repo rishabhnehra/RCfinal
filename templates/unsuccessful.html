@@ -10,22 +10,32 @@
 {% block content %}
 <style>
   .navbar{
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
   #query{
     margin-bottom: 10px;
   }
+  .bg-red{
+    background-color: #cc0000;
+    color: #ffffff;
+  }
+  p{
+    font-size: 20px;
+    text-align: center;
+  }
+  .container-fluid {
+    padding-top: 67px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 114px;
+}
 </style>
-<div class="container">  
-      <div class="col-md-8 col-md-offset-3">
-        <div class="col-md-4">
-        <i class="fa fa-times fa-5x"></i>
-      </div>
-      <div class="col-md-8">
-          <h1>OOPS!!!</h1>
+<div class="container-fluid text-center bg-red">  
+          <i class="fa fa-times fa-5x"></i>
+          <h1><strong>OOPS!</strong></h1>
           <p>Your booking is not successfully registered. Please try again later. If the problem persists, email us at rishabhnehrapersonal@gmail.com</p>
-      </div>
-      </div>
 </div>
 {% endblock %}
 
